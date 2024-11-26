@@ -82,8 +82,27 @@
     display: flex;
     background: var(--primary-color);
     flex-direction: column;
+    transform: translateX(-150%);
     width: 100%;
     font-size: 1.2rem;
     z-index: 99;
+    height: calc(100vh - 4rem);
+  }
+  .nm-menu span {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .m-funded-button {
+    width: 100%;
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
+    border-radius: 999px;
+    color: var(--dark-bg);
   }
 }

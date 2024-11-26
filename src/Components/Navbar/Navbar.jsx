@@ -1,7 +1,10 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import './Navbar.css';
 import { BiMenuAltRight } from 'react-icons/bi';
 const Navbar = () => {
+  const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
   return (
     <div className="n-wrapper">
       {/*Desktop Version */}
@@ -29,7 +32,7 @@ const Navbar = () => {
         <span>EdenBug</span>
 
         {/* menu icon */}
-        <BiMenuAltRight size={30} />
+        <BiMenuAltRight size={30} onClick={() => setMobileMenuOpened(true)} />
 
         {/* Mobile Menu */}
         <div className="nm-menu">
@@ -37,6 +40,7 @@ const Navbar = () => {
           <span>HOW IT WORKS</span>
           <span>WHO WE INVEST IN</span>
           <span>TESTIMONIALS</span>
+          <div className="m-funded-button">Get Funded</div>
         </div>
       </div>
     </div>
