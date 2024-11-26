@@ -1,3 +1,9 @@
+import Navbar from '@/src/Components/Navbar/Navbar';
+import './page.css';
 export default function Home() {
-  return <div>Asim Zahoor Awan</div>;
+  return (
+    <div className="app">
+      <Navbar />
+    </div>
+  );
 }
