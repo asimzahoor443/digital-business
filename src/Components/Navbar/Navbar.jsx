@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { BiMenuAltRight } from 'react-icons/bi';
+import { RxCross2 } from 'react-icons/rx';
 const Navbar = () => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
   return (
@@ -32,10 +33,16 @@ const Navbar = () => {
         <span>EdenBug</span>
 
         {/* menu icon */}
-        <BiMenuAltRight size={30} onClick={() => setMobileMenuOpened(true)} />
-
+        {!mobileMenuOpened ? (
+          <BiMenuAltRight size={30} onClick={() => setMobileMenuOpened(true)} />
+        ) : (
+          <RxCross2 size={30} onClick={() => setMobileMenuOpened(false)} />
+        )}
         {/* Mobile Menu */}
-        <div className="nm-menu">
+        <div
+          className="nm-menu"
+          style={{ transform: mobileMenuOpened && 'translateX(0%)' }}
+        >
           <span>WHAT WE DO</span>
           <span>HOW IT WORKS</span>
           <span>WHO WE INVEST IN</span>
