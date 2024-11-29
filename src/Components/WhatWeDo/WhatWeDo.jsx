@@ -1,8 +1,16 @@
+'use client';
 import React from 'react';
 import './WhatWeDo.css';
 import './WhatWeDo.css';
 import { features } from '@/src/utils/data';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import {
+  containerVariants,
+  desVariants,
+  tagVariants,
+  titleVariants,
+} from '@/src/utils/animation';
 const WhatWeDo = () => {
   return (
     <div className="wwd-wrapper">
@@ -10,11 +18,30 @@ const WhatWeDo = () => {
         <div className="wwd-container">
           {/* Head of section */}
           <div className="wwd-head">
-            <span className="tag">What we do</span>
-            <span className="title">
+            <motion.span
+              initial="offscreen"
+              whileInView={'onscreen'}
+              variants={tagVariants}
+              className="tag"
+            >
+              What we do
+            </motion.span>
+            <motion.span
+              initial="offscreen"
+              whileInView={'onscreen'}
+              variants={titleVariants}
+              className="title"
+            >
               Empowering founders with non dilutive cap expertise
-            </span>
-            <span className="des">her is how we can evaluate</span>
+            </motion.span>
+            <motion.span
+              initial="offscreen"
+              whileInView={'onscreen'}
+              variants={desVariants}
+              className="des"
+            >
+              her is how we can evaluate
+            </motion.span>
           </div>
 
           {/* Two blocls*/}
@@ -22,14 +49,32 @@ const WhatWeDo = () => {
           <div className="wwd-blocks">
             {/* First Block */}
             <div className="wwd-block">
-              <span className="sec-title">Blue Advances</span>
-              <span className="text">
+              <motion.span
+                variants={titleVariants}
+                initial="offscreen"
+                whileInView={'onscreen'}
+                className="sec-title"
+              >
+                Blue Advances
+              </motion.span>
+              <motion.span
+                variants={desVariants}
+                initial="offscreen"
+                whileInView={'onscreen'}
+                className="text"
+              >
                 Fund recurring growth expenses e.g. customer acquisition,
                 inventory
-              </span>
+              </motion.span>
               <div className="block-features">
                 {features.slice(0, 3).map((feature, i) => (
-                  <div className="block-feature" key={i}>
+                  <motion.div
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    variants={containerVariants((i + 1) * 0.1)}
+                    className="block-feature"
+                    key={i}
+                  >
                     <Image
                       src={feature.icon}
                       alt="feature"
@@ -37,20 +82,39 @@ const WhatWeDo = () => {
                       height={60}
                     />
                     <span>{feature.title}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
 
             {/* Second Block */}
             <div className="wwd-block">
-              <span className="sec-title">Blue Seed</span>
-              <span className="text">
+              <motion.span
+                variants={titleVariants}
+                initial="offscreen"
+                whileInView={'onscreen'}
+                className="sec-title"
+              >
+                Blue Seed
+              </motion.span>
+              <motion.span
+                variants={desVariants}
+                initial="offscreen"
+                whileInView={'onscreen'}
+                className="text"
+              >
                 Fund one-offs to scale e.g. product, hiring
-              </span>
+              </motion.span>
+
               <div className="block-features">
                 {features.slice(3, 6).map((feature, i) => (
-                  <div className="block-feature" key={i}>
+                  <motion.div
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    variants={containerVariants((i + 1) * 0.1)}
+                    className="block-feature"
+                    key={i}
+                  >
                     <Image
                       src={feature.icon}
                       alt="feature"
@@ -58,14 +122,19 @@ const WhatWeDo = () => {
                       height={60}
                     />
                     <span>{feature.title}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
 
           {/* Support Block*/}
-          <div className="wwd-support">
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={containerVariants(0.3)}
+            className="wwd-support"
+          >
             {/* Left Side */}
             <div>
               <span className="sec-title">Blue Growth Support</span>
@@ -73,7 +142,20 @@ const WhatWeDo = () => {
                 Data insights and full stack expertise to supercharge growth
               </span>
             </div>
-          </div>
+            {/* Right Side */}
+            <div>
+              <span className="text">
+                Actionable data insights by connecting revenue, marketing and
+                social media platforms
+              </span>
+              <span className="text">
+                On demand execution expertise at cost or revenue share across
+                proposition design, engineering, marketing analytics,
+                partnerships, brand, intellectual property, market expansion,
+                talent management
+              </span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

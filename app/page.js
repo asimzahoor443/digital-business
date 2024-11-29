@@ -3,6 +3,8 @@ import './page.css';
 import Hero from '@/src/Components/Hero/Hero';
 import BrandingVideo from '@/src/Components/BrandingVideo/BrandingVideo';
 import WhatWeDo from '@/src/Components/WhatWeDo/WhatWeDo';
+import OurDiff from '@/src/Components/OurDiff/OurDiff';
+import { motion, useAnimation } from 'framer-motion';
 export default function Home() {
   return (
     <div className="app">
@@ -10,6 +12,7 @@ export default function Home() {
       <Hero />
       <BrandingVideo />
       <WhatWeDo />
+      <OurDiff />
     </div>
   );
 }
