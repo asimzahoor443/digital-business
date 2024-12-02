@@ -8,6 +8,7 @@ import OurDiff from '@/src/Components/OurDiff/OurDiff';
 import { motion, useAnimation } from 'framer-motion';
 import HowItWorks from '@/src/Components/HowItWorks/HowItWorks';
 import WhoWeInvest from '@/src/Components/WhoWeInvest/WhoWeInvest';
+import Testimonials from '@/src/Components/Testimonials/Testimonials';
 export default function Home() {
   const controls = useAnimation();
   return (
@@ -49,6 +50,7 @@ export default function Home() {
       >
         <WhoWeInvest />
       </motion.div>
+      <Testimonials />
     </motion.div>
   );
 }
