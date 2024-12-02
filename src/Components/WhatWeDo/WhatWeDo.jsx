@@ -13,7 +13,7 @@ import {
 } from '@/src/utils/animation';
 const WhatWeDo = () => {
   return (
-    <div className="wwd-wrapper">
+    <div className="wwd-wrapper" id="wwd">
       <div className="container">
         <div className="wwd-container">
           {/* Head of section */}

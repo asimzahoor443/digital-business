@@ -18,7 +18,7 @@ const HowItWorks = () => {
     },
   };
   return (
-    <div className="hiw-wrapper">
+    <div className="hiw-wrapper" id="hiw">
       <div className="container">
         <div className="hiw-container">
           {/* Head */}
@@ -59,7 +59,7 @@ const HowItWorks = () => {
                     transition: {
                       type: 'easeIn',
                       duration: 1,
-                      delay: .7
+                      delay: 0.7,
                     },
                   }}
                   className="detail"

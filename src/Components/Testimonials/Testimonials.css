@@ -89,3 +89,12 @@
   color: rgba(128, 128, 128, 0.688);
   font-size: 0.8rem;
 }
+
+@media (min-width: 1280px) {
+  .slick-slide.slick-active.slick-current + .slick-slide.comment {
+    transition: all 1000ms ease-out;
+    scale: 1.1;
+    transform: translateY(-30px);
+    box-shadow: var(--shadow);
+  }
+}

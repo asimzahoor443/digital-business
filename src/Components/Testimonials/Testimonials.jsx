@@ -3,7 +3,7 @@ import './Testimonials.css';
 import SlickSlider from './SlickSlider';
 const Testimonials = () => {
   return (
-    <div className="t-wrapper">
+    <div className="t-wrapper" id="testimonial">
       <div className="container">
         <div className="t-container">
           <div className="t-head">

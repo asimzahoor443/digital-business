@@ -9,7 +9,7 @@ import {
 } from '@/src/utils/animation';
 const WhoWeInvest = () => {
   return (
-    <div className="wwi-wrapper">
+    <div className="wwi-wrapper" id="wwi">
       <div className="container">
         <div className="wwi-container">
           {/* Left Side */}
